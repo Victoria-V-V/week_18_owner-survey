@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник про котиков</title>
+    <style>
+        input:required:valid {
+            border-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Опрос для владельцев</h1>
+    <form>
+        <div>
+            <div><input type="text" id="petname" placeholder="Кличка питомца" required>*</div><br>
+            <div><input type="number" max="10" min="1" placeholder="Вес" required>*</div><br>
+
+            <fieldset>
+                <legend>Информация о владельце</legend><br>
+                <div><input type="text" id="name" placeholder="Имя" required>*</div><br>
+
+                <div><input type="text" id="surname" placeholder="Фамилия" required>*</div><br>
+
+                <div><input type="tel" id="phone" placeholder="Телефон"
+                        pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>*</div><br>
+
+                <div><input type="email" id="email" placeholder="e-mail" required>*</div>
+            </fieldset><br>
+
+            <fieldset>
+                <!-- а валидацию этого поля только лишь с html5 уже не получится реализовать -->
+                <legend>Чем питается Ваш питомец?</legend>
+                <input type="checkbox" name="feed" value="dry" />
+                сухой корм<br>
+                <input type="checkbox" name="feed" value="wet" />
+                влажный корм <br>
+                <input type="checkbox" name="feed" value="natural" />
+                натуральный корм <br>
+            </fieldset><br />
+
+            <p>Дополнительные сведения:*</p>
+            <div><textarea rows="6" cols="100" minlength="10" maxlength="100" placeholder="Комментарий владельца"
+                    required></textarea>
+            </div>
+
+            <div>
+                <button>Сохранить</button></div>
+    </form>
+</body>
+
+</html>
